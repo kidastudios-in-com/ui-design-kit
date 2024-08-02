@@ -1,17 +1,26 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-/// Creates a glass effect as background for any [child]
-/// Optionally give [color], defaults to White
 class GlassEffect extends StatelessWidget {
-  final Color color;
-  final Widget child;
-  const GlassEffect({super.key, required this.child, this.color = Colors.white});
+  final height;
+  final width;
+  const GlassEffect({super.key , required this.height, required this.width});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: color,
-      child: child,
-    );
+    return BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                child: Container(
+                  height: height,
+                  width: width,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    border: Border.all(
+                      color: Colors.white.withOpacity(0.2),
+                    ),
+                  ),
+                )
+        );
   }
 }
