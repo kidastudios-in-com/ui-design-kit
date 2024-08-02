@@ -1,6 +1,6 @@
 library ui_design_kit;
 
-export 'glass_effect.dart';
+export 'glass_effect.dart' show GlassEffect;
 
 /// A Calculator.
 class Calculator {

@@ -1,7 +1,7 @@
 name: ui_design_kit
 description: "A Flutter component kit for re-usable components"
 version: 0.0.1
-homepage:
+homepage: https://github.com/kidastudios-in-com/ui-design-kit
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
